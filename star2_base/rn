@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Uncomment the following line to skip the optional inlists
+# MESA_SKIP_OPTIONAL=t
+
+# Define the output log file
+log_file="star2.log"
+
+# Redirect all subsequent output to the log file
+exec > >(tee -a "$log_file") 2>&1
+
+# This provides the definition of do_one (run one part of test)
+# do_one [inlist] [output model] [LOGS directory]
+source "${MESA_DIR}/star/test_suite/test_suite_helpers"
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+
+do_one star2_base/inlist_zams_header zams.mod
+do_one star2_base/inlist_to_end_he_core_burn_header end_he_core_burn.mod
+do_one star2_base/inlist_co_core_header co_core.mod
+do_one star2_base/inlist_remove_env_header co_wd.mod
+do_one star2_base/inlist_settle_header final.mod
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+
+echo 'finished'

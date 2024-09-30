@@ -1,0 +1,146 @@
+DATE: 2024-07-12
+TIME: 15:39:25
+run /Users/abinaya/work/star2_base/inlist_zams_header
+DATE: 2024-07-12
+TIME: 15:39:25
+./rn1: line 6: /Users/abinaya/work/star: No such file or directory
+DATE: 2024-07-12
+TIME: 15:39:25
+
+******************************************************************
+failed to create zams.mod when running /Users/abinaya/work/star2_base/inlist_zams_header
+******************************************************************
+
+DATE: 2024-07-12
+TIME: 15:40:47
+run /Users/abinaya/work/star2_base/inlist_zams_header
+DATE: 2024-07-12
+TIME: 15:40:47
+./rn1: line 6: /Users/abinaya/work/star: No such file or directory
+DATE: 2024-07-12
+TIME: 15:40:47
+
+******************************************************************
+failed to create zams.mod when running /Users/abinaya/work/star2_base/inlist_zams_header
+******************************************************************
+
+DATE: 2024-07-12
+TIME: 15:41:12
+run /Users/abinaya/work/star2_base/inlist_zams_header
+DATE: 2024-07-12
+TIME: 15:41:12
+ Failed to open control namelist file "inlist_change"
+ reading user weak rate file /Users/abinaya/Documents/sw/mesa-r23.05.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
+ version_number r23.05.1
+ read /Users/abinaya/work/mesa/base/inlist_project
+ read inlist_change
+ Failed to open control namelist file inlist_change
+
+
+ The terminal output contains the following information
+
+      'step' is the number of steps since the start of the run,
+      'lg_dt' is log10 timestep in years,
+      'age_yr' is the simulated years since the start run,
+      'lg_Tcntr' is log10 center temperature (K),
+      'lg_Dcntr' is log10 center density (g/cm^3),
+      'lg_Tmax' is log10 max temperature (K),
+      'Teff' is the surface temperature (K),
+      'lg_R' is log10 surface radius (Rsun),
+      'lg_L' is log10 surface luminosity (Lsun),
+      'lg_LH' is log10 total PP and CNO hydrogen burning power (Lsun),
+      'lg_L3a' is log10 total triple-alpha helium burning power (Lsun),
+      'lg_gsurf' is log10 surface gravity,
+      'lg_LNuc' is log10 nuclear power (Lsun),
+      'lg_LNeu' is log10 total neutrino power (Lsun),
+      'lg_Lphoto' is log10 total photodisintegration (Lsun),
+      'Mass' is the total stellar baryonic mass (Msun),
+      'lg_Mdot' is log10 magnitude of rate of change of mass (Msun/year),
+      'lg_Dsurf' is log10 surface density (g/cm^3),
+      'H_env' is the amount of mass where H is dominant,
+      'He_core' is the largest mass where He is dominant.
+      'CO_core' is the largest mass where CO is dominant.
+      'H_cntr' is the center H1 mass fraction,
+      'He_cntr' is the center He4 mass fraction,
+      'C_cntr' is the center C12 mass fraction,
+      'N_cntr' is the center N14 mass fraction,
+      'O_cntr' is the center O16 mass fraction,
+      'Ne_cntr' is the center Ne20 mass fraction,
+      'gam_cntr' is the center plasma interaction parameter,
+      'eta_cntr' is the center electron degeneracy parameter,
+      'zones' is the number of zones in the current model,
+      'iters' is the number of solver iterations for the current step,
+      'retry' is the number of step retries required during the run,
+      'dt_limit' is an indication of what limited the timestep.
+
+ All this and more are saved in the LOGS directory during the run.
+ create pre-main-sequence model
+                                          species  mass           8    1.0000000000000000D+00
+
+                                        relax_num_steps         300
+
+ retry:  logRho > hydro_mtx_max_allowed_logRho          24       1
+          1   5.479690   5730.638 -20.881389 -20.881389   1.000000   1.000000   0.700000   0.001010   0.280000  -8.035595   1702      1
+-5.3010E+00   5.479690   1.474424 -99.000000 -22.279257 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071405     52
+ 5.0000E-06  -3.290732   2.936354 -99.000000 -99.000000  -8.673859   0.000000   0.003447   0.002085   0.020000  0.000E+00         retry
+
+          2   5.477469   5545.403 -20.881559 -20.881559   1.000000   1.000000   0.700000   0.001010   0.280000  -8.028109    900      1
+-5.0000E+00   5.477469   1.473132 -99.000000 -22.279427 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071767      4
+ 1.5000E-05  -3.290806   2.876689 -99.000000 -99.000000  -8.548027   0.000000   0.003447   0.002085   0.020000  0.000E+00  max increase
+
+          3   5.477416   5419.103 -20.881923 -20.881923   1.000000   1.000000   0.700000   0.001010   0.280000  -8.025937    560      1
+-5.0000E+00   5.477216   1.472340 -99.000000 -22.279791 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071840      3
+ 2.5000E-05  -3.290241   2.835084 -99.000000 -99.000000  -8.469052   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          4   5.477419   5331.116 -20.881924 -20.881924   1.000000   1.000000   0.700000   0.001010   0.280000  -8.025106    561      1
+-5.0000E+00   5.477087   1.471815 -99.000000 -22.279792 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071870      3
+ 3.5000E-05  -3.290073   2.805596 -99.000000 -99.000000  -8.418065   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          5   5.477526   5263.808 -20.882421 -20.882421   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024714    558      1
+-5.0000E+00   5.477136   1.471426 -99.000000 -22.280289 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071876      3
+ 4.5000E-05  -3.289830   2.782746 -36.248538 -99.000000  -8.381994   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          6   5.477526   5209.485 -20.882425 -20.882425   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024508    558      1
+-5.0000E+00   5.477106   1.471124 -99.000000 -22.280293 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071883      3
+ 5.5000E-05  -3.289785   2.764122 -99.000000 -99.000000  -8.355044   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          7   5.477526   5164.075 -20.882428 -20.882428   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024386    563      1
+-5.0000E+00   5.477089   1.470882 -99.000000 -22.280296 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071887      3
+ 6.5000E-05  -3.289757   2.748427 -99.000000 -99.000000  -8.334235   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          8   5.477527   5124.103 -20.882431 -20.882431   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024308    556      1
+-5.0000E+00   5.477078   1.470678 -99.000000 -22.280299 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071890      3
+ 7.5000E-05  -3.289740   2.734520 -99.000000 -99.000000  -8.317395   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+          9   5.477527   5089.138 -20.882433 -20.882433   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024252    560      1
+-5.0000E+00   5.477068   1.470506 -99.000000 -22.280301 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071892      3
+ 8.5000E-05  -3.289730   2.722283 -99.000000 -99.000000  -8.303930   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+
+__________________________________________________________________________________________________________________________________________________
+
+       step    lg_Tmax     Teff     lg_LH      lg_Lnuc     Mass       H_rich     H_cntr     N_cntr     Y_surf   eta_cntr   zones  retry
+  lg_dt_yrs    lg_Tcntr    lg_R     lg_L3a     lg_Lneu     lg_Mdot    He_core    He_cntr    O_cntr     Z_surf   gam_cntr   iters  
+    age_yrs    lg_Dcntr    lg_L     lg_LZ      lg_Lphoto   lg_Dsurf   CO_core    C_cntr     Ne_cntr    Z_cntr   v_div_cs       dt_limit
+__________________________________________________________________________________________________________________________________________________
+
+         10   5.477527   5057.577 -20.882435 -20.882435   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024213    559      1
+-5.0000E+00   5.477062   1.470358 -99.000000 -22.280303 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071894      3
+ 9.5000E-05  -3.289723   2.711180 -99.000000 -99.000000  -8.292887   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+         11   5.477527   5028.561 -20.882435 -20.882435   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024186    551      1
+-5.0000E+00   5.477057   1.470230 -99.000000 -22.280303 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071895      3
+ 1.0500E-04  -3.289717   2.700928 -99.000000 -99.000000  -8.283738   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+         12   5.477527   5001.933 -20.882437 -20.882437   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024167    555      1
+-5.0000E+00   5.477054   1.470117 -99.000000 -22.280305 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071896      3
+ 1.1500E-04  -3.289714   2.691480 -99.000000 -99.000000  -8.276232   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+         13   5.477528   4977.195 -20.882440 -20.882440   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024153    553      1
+-5.0000E+00   5.477052   1.470018 -99.000000 -22.280308 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071896      3
+ 1.2500E-04  -3.289711   2.682667 -99.000000 -99.000000  -8.270018   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+
+         14   5.477528   4954.003 -20.882442 -20.882442   1.000000   1.000000   0.700000   0.001010   0.280000  -8.024142    554      1
+-5.0000E+00   5.477050   1.469928 -99.000000 -22.280310 -99.000000   0.000000   0.280000   0.009381   0.020000   0.071897      3
+ 1.3500E-04  -3.289709   2.674375 -99.000000 -99.000000  -8.264805   0.000000   0.003447   0.002085   0.020000  0.000E+00        max_dt
+

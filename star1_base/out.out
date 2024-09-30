@@ -1,0 +1,13 @@
+DATE: 2023-11-05
+TIME: 17:08:07
+run inlist_to_end_core_h_burn_header
+DATE: 2023-11-05
+TIME: 17:08:07
+ reading user weak rate file /afs/mpa/temp/abinaya/sw/mesa-r23.05.1/data/rates_data/rate_tables/S13_r_be7_wk_li7.h5
+ version_number r23.05.1
+ read inlist_to_end_core_h_burn
+ create pre-main-sequence model
+                                          species  mass           8    4.5000000000000000D+00
+
+                                        relax_num_steps         300
+

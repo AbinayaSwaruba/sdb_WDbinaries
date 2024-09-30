@@ -1,0 +1,122 @@
+
+! inlist_make_sdb
+
+
+&star_job
+      show_log_description_at_start = .false.
+
+      load_saved_model = .true.
+      load_model_filename = 'end_core_he_burn.mod' 
+         ! from 1M_pre_ms_to_wd
+         ! inlist_to_end_core_he_burn
+         ! modified to stop when he4 drops below xa_central_lower_limit = 0.95
+
+      change_initial_net = .true.      
+      new_net_name = 'basic_plus_fe56_ni58.net'
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'sdb.mod'
+      !#required_termination_code_string = 'max_model_number'
+
+      save_photo_when_terminate = .true.
+      save_photo_filename = 'sdb.photo'
+
+      set_initial_model_number = .true.
+      initial_model_number = 0
+
+      set_initial_age = .true.
+      initial_age = 0
+
+      pgstar_flag = .true.
+
+/ ! end of star_job namelist
+
+&kap
+      Zbase = 0.02d0
+      use_Type2_opacities = .true.
+      kap_file_prefix = 'OP_gs98'
+/ ! end of kap namelist
+
+&eos
+/ ! end of eos namelist
+
+&controls
+
+      ! limit max_model_number as part of test_suite
+      !max_model_number =250 
+      
+      use_gold2_tolerances = .true.
+      dxdt_nuc_factor = 0     
+      
+      he_core_boundary_h1_fraction = 0.001       
+      
+      cool_wind_RGB_scheme = 'Reimers'
+      cool_wind_AGB_scheme = 'Blocker'
+      cool_wind_full_on_T = 9.99d+09
+      hot_wind_full_on_T = 1d+10
+      RGB_to_AGB_wind_switch = 0.75d0
+      Reimers_scaling_factor = 10000d0
+      Blocker_scaling_factor = 0.2d0
+      
+      
+      x_integer_ctrl(1) = 1 ! part number
+      x_ctrl(1) = 3d-4 
+      x_ctrl(2) = 0.01d0
+      x_ctrl(3) = 5e9 
+      varcontrol_target = 1d-3
+      min_timestep_limit = 1d-6 ! (seconds)
+         
+      do_conv_premix = .true.
+      do_premix_heating = .true.
+
+      photo_interval = 50
+      profile_interval = 50
+      history_interval = 5
+      terminal_interval = 10 
+      
+      !trace_k = 0
+
+/ ! end of controls namelist
+
+
+&pgstar
+  ! see star/defaults/pgstar.defaults
+
+  ! MESA uses PGPLOT for live plotting and gives the user a tremendous
+  ! amount of control of the presentation of the information.
+
+  ! show HR diagram
+  ! this plots the history of L,Teff over many timesteps
+    HR_win_flag = .true.
+
+  ! set static plot bounds
+
+  ! set window size (aspect_ratio = height/width)
+    HR_win_width = 6
+    HR_win_aspect_ratio = 1.0
+
+  ! Abundance
+    Abundance_win_flag = .true.
+
+    Abundance_win_width = 6
+    Abundance_win_aspect_ratio = 0.75
+
+
+
+
+  ! show temperature/density profile
+  ! this plots the internal structure at single timestep
+    TRho_Profile_win_flag = .true.
+
+  ! add legend explaining colors
+    show_TRho_Profile_legend = .true.
+
+  ! display numerical info about the star
+    show_TRho_Profile_text_info = .true.
+
+  ! set window size (aspect_ratio = height/width)
+    TRho_Profile_win_width = 8
+    TRho_Profile_win_aspect_ratio = 0.75
+
+/ ! end of pgstar namelist
+

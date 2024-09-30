@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source "${MESA_DIR}/star/test_suite/test_suite_helpers"
+# Define the output log file
+log_file="star1.log"
+
+# Redirect all subsequent output to the log file
+exec > >(tee -a "$log_file") 2>&1
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+
+# Run the commands
+!do_one /afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/inlist_to_end_core_h_burn_header end_core_h_burn.mod LOGS_to_end_core_h_burn
+!do_one /afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/inlist_to_start_he_core_flash_header start_he_core_flash.mod LOGS_to_start_he_core_flash
+!do_one /afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/inlist_to_end_core_he_burn_header end_core_he_burn.mod LOGS_to_end_core_he_burn
+do_one /afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/inlist_make_sdb_header sdb.mod LOG_make_sdb
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+
+echo 'finished'
+

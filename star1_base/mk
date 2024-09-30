@@ -1,0 +1,13 @@
+#!/bin/bash
+
+function check_okay {
+	if [ $? -ne 0 ]
+	then
+		echo
+		echo "FAILED"
+		echo
+		exit 1
+	fi
+}
+
+cd /afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/make; make; check_okay

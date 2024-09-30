@@ -1,0 +1,7 @@
+#!/bin/bash
+
+rm -f restart_photo
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+/afs/mpa/temp/abinaya/He_accWD/grid_donor/star1_base/star
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
