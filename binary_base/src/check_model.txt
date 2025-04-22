@@ -1,0 +1,32 @@
+subroutine change_h1_xa(binary_id, s_i, ierr)
+         use chem_def
+         
+         integer, intent(in) :: binary_id, s_i
+         integer, intent(out) :: ierr
+         type (binary_info), pointer :: b
+         integer :: k, nz, h1,he4,j
+         integer :: i_burn_max
+         real(dp) :: eps_nuc,h1_xa
+        
+         write(*, *) 'hydrogen mass'
+         ierr = 0
+         call binary_ptr(binary_id, b, ierr)
+         if (ierr /= 0) then
+            write(*,*) 'failed in binary_ptr'
+            return
+         end if
+         
+         h1 = b%s_accretor% net_iso(ih1)
+         he4 = b%s_accretor% net_iso(ihe4)
+         
+         if (b%s_accretor%star_mdot > 0) then
+            write (*,*) sum(b% s_accretor% accretion_species_xa)
+            h1_xa = b% s_accretor% accretion_species_xa(h1)
+            b% s_accretor% accretion_species_xa(h1) = 0
+            b% s_accretor% accretion_species_xa(he4) = h1_xa + b% s_accretor% accretion_species_xa(he4)
+            do k = 1, 5
+               write(*, *) b% s_accretor% accretion_species_id(k),b% s_accretor% accretion_species_xa(k),h1,k
+            end do
+         end if 
+         write(*, *) ' hydrogen mass',b% s_accretor% star_mass_h1
+      end subroutine change_h1_xa
